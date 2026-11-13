@@ -1,0 +1,10 @@
+- insert:
+    - id: xc-compliance-mcp
+      name: '@deepseek-ai/dsh-mcp-client'
+      config:
+        serverName: xc-compliance
+        transport: streamable-http
+        url: https://agent.xiaochucompliance.com/agent-tools/mcp
+        startupTimeoutMs: 20000
+        toolCallTimeoutMs: 30000
+        maxInstructionBytes: 32768
