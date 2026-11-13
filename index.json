@@ -1,0 +1,40 @@
+{
+  "format": 1,
+  "title": {
+    "en": "xc-compliance community plugins",
+    "zh": "霄楚合规社区插件"
+  },
+  "description": {
+    "en": "Community distribution by xc-compliance. Not an official DeepSeek certification or curated marketplace.",
+    "zh": "由霄楚提供的社区分发目录，不代表DeepSeek官方认证或精选市场。"
+  },
+  "plugins": [
+    {
+      "name": "dsh-plugin-xc-compliance",
+      "title": {
+        "en": "xc-compliance EU evidence connector (Beta)",
+        "zh": "霄楚合规 AI 助手 · 欧盟证据连接器（测试版）"
+      },
+      "description": {
+        "en": "Read-only official EU legal excerpts and historical product safety alerts for manufacturers and exporters. Dependency import and official MCP probe passed. Full Harness profile activation and model-client acceptance are pending. Uses the customer host account; this service invokes no upstream model.",
+        "zh": "面向制造商、出口商的欧盟法规摘录与历史安全通报只读检索。依赖加载和官方MCP连接探测已通过，完整Harness安装和模型实测仍待完成。推理使用客户自己的宿主账户，检索服务不调用上游大模型。"
+      },
+      "author": "xc-compliance",
+      "homepage": "https://www.xc-compliance.com/agent-hub?lang=zh",
+      "repository": {
+        "url": "https://github.com/outsmall/dsh-plugin-xc-compliance"
+      },
+      "versions": [
+        {
+          "version": "0.1.0",
+          "source": {
+            "type": "git",
+            "url": "https://github.com/outsmall/dsh-plugin-xc-compliance",
+            "commit": "24436a61c0be7d23c76d475030fc2d523579608f"
+          },
+          "publishTimestamp": 1794541599
+        }
+      ]
+    }
+  ]
+}
