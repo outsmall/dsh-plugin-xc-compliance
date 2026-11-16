@@ -1,0 +1,23 @@
+{
+  "name": "xc-compliance",
+  "version": "0.2.1",
+  "description": "EU product compliance reference for manufacturers and exporters, with official legal excerpts and historical safety alerts.",
+  "skills": "./skills/",
+  "homepage": "https://www.xc-compliance.com/agent-hub?lang=zh",
+  "interface": {
+    "displayName": "霄楚合规 AI 助手",
+    "shortDescription": "出口欧盟前，先查风险、文件缺口与真实监管案例",
+    "developerName": "xc-compliance",
+    "websiteURL": "https://www.xc-compliance.com"
+  },
+  "mcpServers": {
+    "xc-compliance": {
+      "url": "https://agent.xiaochucompliance.com/agent-tools/mcp",
+      "enabledTools": [
+        "search_risk_cases",
+        "search_legal_sources"
+      ]
+    }
+  }
+}
+
