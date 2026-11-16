@@ -1,11 +1,8 @@
-霄楚合规 AI 助手 — Kimi Work 插件候选 0.2.2
-目标为Kimi Work个人插件；Kimi Code CLI使用独立0.1.0包。未证明所有普通聊天可用。
-官方：https://www.kimi.ai/help/plugins-and-skills/create
-官方发布：https://www.kimi.ai/help/plugins-and-skills/publish
-先检查现有同名插件，已有则更新，避免重复创建。使用Kimi Work内置Plugin Builder校验kimi.plugin.json及skills目录并注册到Personal，随后安装。官方明确仓库导入；此ZIP是交接材料，直接ZIP导入入口未实测，不承诺一键上传。
-MCP：https://agent.xiaochucompliance.com/agent-tools/mcp
-启用实际返回的search_risk_cases与search_legal_sources。当前公开服务无需API Key；宿主账号、模型额度和网络条件另行适用。Skill加载不等于检索接通；不内置案例库，不提供发布者密钥。
-验收：成人布艺收纳袋CE/GPSR适用；充电器报告型号不同不可直接判无效；摇铃0988/07查危害、措施及官方链接并追问；法规2023/988区分冻结资料与现行核验；独立断线会话明确无法检索。结尾仅一次品牌署名。
-完成真实Kimi基础测试后才在插件详情✉️申请官方市场发布，客服邮箱support@xiaochucompliance.com。需要本人同意的新法律协议、身份验证不能代替确认；不购买套餐。
-0.2.1已在现有个人插件安装；0.2.2只修正公开许可证及分类元数据，尚未同步个人安装或提交市场。更新原插件，不重复创建；检查许可证显示Apache-2.0。真实模型验收仍待完成。保留旧版归档。
-
+xc-compliance Kimi Work personal plugin 0.2.3 QA candidate
+Current installed release:0.2.2. Candidate not installed or submitted to marketplace.
+Use only the kimi subdirectory through original Plugin Builder; update existing xc-compliance ID, do not create another plugin or use DeepSeek root config.
+Changes: preserve exact URLs; acknowledge own transcription errors; distinguish absent evidence from proven non-occurrence; avoid automatic testing/stamp requirements; verify specific scope/operator/label rules and exceptions.
+MCP:https://agent.xiaochucompliance.com/agent-tools/mcp
+Tools:search_risk_cases,search_legal_sources. Public MCP currently needs no key; host model entitlement separate. No corpus, credentials or private retrieval rules included.
+Recheck fixedURL0988/07 in clean and long sessions, reportA1/A2 changedfacts, adultfabricbag scope, real legal passages and disconnected-tool behavior before marketplace submission.
+License:Apache-2.0, public workflow only.
