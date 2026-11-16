@@ -12,8 +12,13 @@ Only necessary generic product/risk keywords or exact public official-source URL
 
 This configuration-only bundle uses the official `@deepseek-ai/dsh-mcp-client` fixed version. It has no lifecycle scripts or custom executable code. The remote endpoint is `https://agent.xiaochucompliance.com/agent-tools/mcp`.
 
-This is a candidate pending isolated Harness activation and actual model-client acceptance. Dependency installation alone is not successful activation. No public Git commit, npm release or official-market approval is claimed by this source directory. A real published source and fixed commit are required before creating a discoverable plugin index.
+The minimal source and third-party installation index are public. The index pins installation to commit `24436a61c0be7d23c76d475030fc2d523579608f`. On 2026-11-16, the official Cordis MCP plugin registered both tools, retrieved historical notification 0988/07 and a legal excerpt, then removed the tools and closed its connection on disposal. This check made no model calls. Full Harness profile/UI installation, model answers and follow-up acceptance remain pending. Public distribution is not official marketplace approval.
+
+Index URL: https://raw.githubusercontent.com/outsmall/dsh-plugin-xc-compliance/main/index.json
+
+In Harness, enable the experimental custom plugin index, open Discover, add this HTTPS index, and verify the repository and pinned commit in the installation confirmation. The customer configures their own model account; this service does not collect model keys.
 
 The ordinary DeepSeek chat app is a different product. See the official [Harness site](https://www.deepseek.com/harness/) and [plugin index documentation](https://deepseek-harness.github.io/deepseek-harness/guide/plugin-market).
 
 Provided by xc-compliance.
+
