@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "xc-compliance": {
+      "type": "streamableHttp",
+      "url": "https://agent.xiaochucompliance.com/agent-tools/mcp",
+      "timeout": 30000
+    }
+  }
+}

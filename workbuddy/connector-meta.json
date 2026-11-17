@@ -1,0 +1,20 @@
+{
+  "name": "霄楚合规 AI 助手",
+  "name_zh": "霄楚合规 AI 助手",
+  "name_en": "xc-compliance",
+  "description": "检索欧盟官方法规摘录与历史产品安全通报，为出口欧盟产品资料核查提供可追溯证据。",
+  "description_zh": "检索欧盟官方法规摘录与历史产品安全通报，为出口欧盟产品资料核查提供可追溯证据。",
+  "description_en": "Find official EU legal excerpts and historical product safety alerts for product compliance review.",
+  "source": "xc-compliance",
+  "type": "mcp",
+  "version": "0.1.0",
+  "minWorkbuddyVersion": "4.24.0",
+  "examples_zh": [
+    "查询通报0988/07的产品、风险和实际措施，附官方链接",
+    "查找2023/988第9条中制造商技术文件义务"
+  ],
+  "examples_en": [
+    "Find alert 0988/07: product, hazard, actual measures and official link.",
+    "Find the manufacturer technical documentation duties in Regulation 2023/988 Article 9."
+  ]
+}
