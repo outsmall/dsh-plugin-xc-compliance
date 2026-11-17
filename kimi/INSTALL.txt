@@ -1,4 +1,4 @@
-xc-compliance Kimi Work personal plugin 0.2.4 QA candidate
+xc-compliance Kimi Work personal plugin 0.2.5 QA candidate
 Current installed release at preparation:0.2.3. Candidate not installed or submitted to marketplace.
 Use only the kimi subdirectory through original Plugin Builder; update existing xc-compliance ID, do not create another plugin or use DeepSeek root config.
 Changes: preserve exact URLs; acknowledge own transcription errors; distinguish absent evidence from proven non-occurrence; avoid automatic testing/stamp requirements; verify specific scope/operator/label rules and exceptions.
@@ -7,4 +7,6 @@ Tools:search_risk_cases,search_legal_sources. Public MCP currently needs no key;
 Recheck fixedURL0988/07 in clean and long sessions, reportA1/A2 changedfacts, adultfabricbag scope, real legal passages and disconnected-tool behavior before marketplace submission.
 License:Apache-2.0, public workflow only.
 
-Additional0.2.4workflowchange: user-described correspondence is a premise, not independent report verification; do not claim the only substantive gap is gone; further test evaluation is not triggered exclusively by material/structure changes. Verify changed-fact rechecks without repeating the interview.
+Additional0.2.5workflowchange: user-described correspondence is a premise, not independent report verification; do not claim the only substantive gap is gone; further test evaluation is not triggered exclusively by material/structure changes. Verify changed-fact rechecks without repeating the interview.
+
+0.2.5 preparation: narrows brief rechecks to supported correspondence and report-scope checks; no private retrieval or MCP change. Actual installation/QA tracked separately.
