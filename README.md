@@ -1,24 +1,21 @@
-# 霄楚合规 AI 助手 · xc-compliance
+# 霄楚合规 AI 助手 · DeepSeek Harness
 
-A read-only evidence connector bundle for DeepSeek Harness. For EU-bound manufacturers, exporters and importers. Connects two tools: `search_risk_cases` and `search_legal_sources`.
+> **暂停分发**：目前公开的 0.1.0 包指向与其他平台共用的 MCP 地址。按服务隔离要求，该版本不再作为可安装的 DeepSeek 接入入口。DeepSeek 专用服务尚未部署和验收，请勿安装旧包用于生产或公开推广。
 
-## Scope
+本项目计划为 DeepSeek Harness 提供只读的欧盟法规与历史产品安全通报检索，面向制造商、出口商及进口商。检索工具预期为 `search_risk_cases` 和 `search_legal_sources`。
 
-The service returns bounded historical official safety alerts and frozen official law/guidance excerpts. It is not a live legal database, certification service or product approval. Official case links remain available. No full corpus is distributed.
+服务范围为有来源链接的历史安全通报及冻结版官方法规/指南摘录；不提供实时法律更新、认证、合规批准或法律意见。未来版本不得分发完整语料、客户资料、凭证，也不得复用其他平台的服务地址。
 
-Only necessary generic product/risk keywords or exact public official-source URLs should be sent. Do not send confidential reports, customer identities or credentials. The service invokes no upstream model; inference uses the customer's own host/provider entitlements.
+## 当前状态
 
-## Integration
+- DeepSeek 专用 MCP 地址和独立运行服务尚未部署。
+- 当前公开社区索引暂不列出可安装版本。
+- 曾完成的配置导入和协议探测仅代表旧共用地址上的历史验证，不代表专用服务或模型回答已验收。
+- 要恢复发布，须先通过独立服务容量、部署和回滚门槛，再完成干净 Harness 配置的真实连接、两项工具调用、错误语义、卸载重载及多轮回答验收。
+- DeepSeek Harness 自定义插件索引是社区分发方式，不代表 DeepSeek 官方认证或精选市场审核。
 
-This configuration-only bundle uses the official `@deepseek-ai/dsh-mcp-client` fixed version. It has no lifecycle scripts or custom executable code. The remote endpoint is `https://agent.xiaochucompliance.com/agent-tools/mcp`.
+## 后续发布
 
-The minimal source and third-party installation index are public. The index pins installation to commit `24436a61c0be7d23c76d475030fc2d523579608f`. On 2026-11-16, the official Cordis MCP plugin registered both tools, retrieved historical notification 0988/07 and a legal excerpt, then removed the tools and closed its connection on disposal. This check made no model calls. Full Harness profile/UI installation, model answers and follow-up acceptance remain pending. Public distribution is not official marketplace approval.
+仅在专用服务上线并完成验收后，才恢复此目录的安装条目和安装步骤。安装者使用自己的 DeepSeek Harness 模型账户；检索服务不代持模型凭证，不调用上游模型。
 
-Index URL: https://raw.githubusercontent.com/outsmall/dsh-plugin-xc-compliance/main/index.json
-
-In Harness, enable the experimental custom plugin index, open Discover, add this HTTPS index, and verify the repository and pinned commit in the installation confirmation. The customer configures their own model account; this service does not collect model keys.
-
-The ordinary DeepSeek chat app is a different product. See the official [Harness site](https://www.deepseek.com/harness/) and [plugin index documentation](https://deepseek-harness.github.io/deepseek-harness/guide/plugin-market).
-
-Provided by xc-compliance.
-
+官网：[霄楚合规 AI 助手](https://www.xc-compliance.com/agent-hub?lang=zh)
