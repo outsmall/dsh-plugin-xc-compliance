@@ -1,4 +1,4 @@
-xc-compliance · Kimi Work plugin 0.2.9 candidate
+xc-compliance · Kimi Work plugin 0.2.10 candidate
 
 This plugin combines an EU product-compliance reference Skill with two read-only evidence tools. Its MCP configuration is https://agent.xiaochucompliance.com/agent-tools/mcp and exposes search_legal_sources and search_risk_cases. The evidence consists of frozen official legal excerpts and historical public safety notices; it is not a live legal check or product approval.
 
@@ -7,4 +7,5 @@ Use the plugin only after Kimi Work confirms that its MCP connection is availabl
 Send only the minimum generic product or hazard keywords, or an exact public official URL and locator. Do not send customer files, identity details or confidential information to the MCP service.
 
 The Chinese and English answer footer is plain text and contains the website domain, not a clickable link.
+
 
