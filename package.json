@@ -1,18 +1,35 @@
 {
   "name": "dsh-plugin-xc-compliance",
-  "version": "0.1.0",
-  "description": "Read-only official EU compliance evidence for manufacturers and exporters.",
+  "version": "0.2.0-candidate.1",
+  "private": true,
   "type": "module",
+  "main": "./index.js",
+  "exports": "./index.js",
   "files": [
+    "index.js",
+    "contract.js",
+    "README.md",
     "cordis.patch.yml"
   ],
+  "dependencies": {
+    "@deepseek-ai/schemastery": "3.19.0"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "~4.1.0",
+    "@deepseek-ai/dsh-tools": "0.2.2-rc.5",
+    "@deepseek-ai/dsh-mcp-client": "0.2.2-rc.5"
+  },
+  "engines": {
+    "node": ">=24.9.0"
+  },
   "dsh": {
     "bundle": {
       "patch": "./cordis.patch.yml"
     }
   },
-  "dependencies": {
-    "@deepseek-ai/dsh-mcp-client": "0.2.2-rc.2"
-  },
-  "homepage": "https://www.xc-compliance.com/agent-hub?lang=zh"
+  "devDependencies": {
+    "@deepseek-ai/cordis": "~4.1.0",
+    "@deepseek-ai/dsh-tools": "0.2.2-rc.5",
+    "@deepseek-ai/dsh-mcp-client": "0.2.2-rc.5"
+  }
 }
