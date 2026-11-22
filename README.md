@@ -9,11 +9,12 @@ This is a Host bundle for DeepSeek Harness `0.2.2-rc.5`, with no Web UI. It expo
 Use a disposable profile and a local checkout of this branch. From the repository root:
 
 ```sh
+pnpm install --no-lockfile
 dsh plugin --profile xc-review add ./
 dsh --profile xc-review --dump-config
 ```
 
-The dump should show bundle `dsh-plugin-xc-compliance` and row `xc-compliance-deepseek-isolated-rc5` with `enabled: false`. Keep the checkout available while the profile uses the local link. This draft commit has not itself completed the install and boot sequence.
+The local dependency install is needed because the development profile links to this checkout. The dump should show bundle `dsh-plugin-xc-compliance` and row `xc-compliance-deepseek-isolated-rc5` with `enabled: false`. Keep the checkout available while the profile uses the local link. A clean local profile installation and configuration dump were checked; authenticated model-answer testing and exact public-commit installation remain open.
 
 ## Activate for a controlled check
 
