@@ -14,7 +14,7 @@ dsh plugin --profile xc-review add ./
 dsh --profile xc-review --dump-config
 ```
 
-The local dependency install is needed because the development profile links to this checkout. The dump should show bundle `dsh-plugin-xc-compliance` and row `xc-compliance-deepseek-isolated-rc5` with `enabled: false`. Keep the checkout available while the profile uses the local link. A clean local profile installation and configuration dump were checked; authenticated model-answer testing and exact public-commit installation remain open.
+The local dependency install is needed because the development profile links to this checkout. The dump should show bundle `dsh-plugin-xc-compliance` and row `xc-compliance-deepseek-isolated-rc5` with `enabled: false`. Keep the checkout available while the profile uses the local link. A clean local profile and an exact public draft commit were installed and exercised with real tool calls against the dedicated endpoint; authenticated model-answer testing remains open.
 
 ## Activate for a controlled check
 
@@ -34,6 +34,6 @@ To disable, set `enabled: false` in the profile patch or remove the override. To
 
 ## Release gates
 
-Before public release, select and add an explicit license file and package license field, remove the draft private flag, test an install and boot from the exact public commit, complete authenticated model-answer checks, and verify dsh.pub catalog admission separately. The committed `index.js` is the Host runtime entry. The predecessor wrapper passed direct HTTPS and official rc.5 Native tool-call checks; this draft has not passed a model-answer test. Do not merge or submit it to dsh.pub yet.
+Before public release, select and add an explicit license file and package license field, remove the draft private flag, repeat installation from the final release commit, complete authenticated model-answer checks, and verify dsh.pub catalog admission separately. The committed `index.js` is the Host runtime entry. The draft exact-commit tool-call test used no model account. Do not merge or submit it to dsh.pub yet.
 
 Provided by xc-compliance · Website xiaochucompliance.com
