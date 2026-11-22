@@ -1,6 +1,6 @@
 {
   "name": "xc-compliance",
-  "version": "0.2.9",
+  "version": "0.2.10",
   "description": "EU product compliance reference for manufacturers and exporters, with official legal excerpts and historical safety alerts.",
   "skills": "./skills/",
   "homepage": "https://www.xc-compliance.com/agent-hub?lang=zh",
@@ -22,3 +22,4 @@
   },
   "license": "Apache-2.0"
 }
+
