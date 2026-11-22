@@ -1,9 +1,38 @@
 # XC Compliance for DeepSeek Harness — source review candidate
 
-This branch prepares an isolated, read-only DeepSeek plugin. The only configured endpoint is `https://agent.xiaochucompliance.com/agent-tools/mcp/deepseek`. The plugin remains disabled by default (`enabled: false`) and the package is private while authenticated model-answer testing and license selection are pending. Do not merge or submit to dsh.pub yet.
+## Scope and requirements
 
-The dedicated MCP endpoint has passed direct HTTPS and official DSH 0.2.2-rc.5 Native tool-call checks. These checks did not use a DeepSeek model account. Test actual tool selection, error/zero-result handling, multi-turn answers and the plain-text website footer in a user-owned model session before release.
+This is a Host bundle for DeepSeek Harness `0.2.2-rc.5`, with no Web UI. It exposes the read-only `search_legal_sources` and `search_risk_cases` tools from the dedicated public MCP endpoint. The XC endpoint requires no XC API key; a DeepSeek model account is separate. The bundle is disabled by default and this branch is neither a release nor a dsh.pub listing.
 
-The service retrieves selected frozen official EU legal excerpts and historical safety alerts. It does not certify products or provide current-law verification. Send only necessary generic search terms or official public URLs; do not send customer documents or credentials.
+## Install and inspect locally
+
+Use a disposable profile and a local checkout of this branch. From the repository root:
+
+```sh
+dsh plugin --profile xc-review add ./
+dsh --profile xc-review --dump-config
+```
+
+The dump should show bundle `dsh-plugin-xc-compliance` and row `xc-compliance-deepseek-isolated-rc5` with `enabled: false`. Keep the checkout available while the profile uses the local link. This draft commit has not itself completed the install and boot sequence.
+
+## Activate for a controlled check
+
+The user's profile patch is applied after bundle patches. In that profile's `cordis.patch.yml`, override the same row with its complete configuration:
+
+```yaml
+- id: xc-compliance-deepseek-isolated-rc5
+  name: dsh-plugin-xc-compliance
+  config:
+    enabled: true
+    endpoint: https://agent.xiaochucompliance.com/agent-tools/mcp/deepseek
+```
+
+Check the effective row with `dsh --profile xc-review --dump-config`, then launch `dsh --profile xc-review`. The plugin accepts only this endpoint and requires exactly the two named tools. A failed probe or unexpected catalog fails activation. Check legal retrieval, historical alerts, zero results, locator errors, and the plain-text website footer with noncustomer prompts in a real model session. Tool-call checks alone do not establish model-answer quality.
+
+To disable, set `enabled: false` in the profile patch or remove the override. To uninstall, run `dsh plugin --profile xc-review remove dsh-plugin-xc-compliance` and remove the profile override. The plugin creates no local durable data; the remote connection is owned by the Harness lifecycle.
+
+## Release gates
+
+Before public release, select and add an explicit license file and package license field, remove the draft private flag, test an install and boot from the exact public commit, complete authenticated model-answer checks, and verify dsh.pub catalog admission separately. The committed `index.js` is the Host runtime entry. The predecessor wrapper passed direct HTTPS and official rc.5 Native tool-call checks; this draft has not passed a model-answer test. Do not merge or submit it to dsh.pub yet.
 
 Provided by xc-compliance · Website xiaochucompliance.com
