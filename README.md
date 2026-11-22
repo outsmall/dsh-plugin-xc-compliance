@@ -1,21 +1,21 @@
 # 霄楚合规 AI 助手 · DeepSeek Harness
 
-> **暂停分发**：目前公开的 0.1.0 包指向与其他平台共用的 MCP 地址。按服务隔离要求，该版本不再作为可安装的 DeepSeek 接入入口。DeepSeek 专用服务尚未部署和验收，请勿安装旧包用于生产或公开推广。
+> 当前公开的 0.1.0 插件仍指向旧的共享 MCP 地址，社区索引已暂停提供可安装条目。请勿将 0.1.0 用作正式 DeepSeek 接入。
 
-本项目计划为 DeepSeek Harness 提供只读的欧盟法规与历史产品安全通报检索，面向制造商、出口商及进口商。检索工具预期为 `search_risk_cases` 和 `search_legal_sources`。
+DeepSeek 专用只读 MCP 已部署：`https://agent.xiaochucompliance.com/agent-tools/mcp/deepseek`。官方 Harness CLI 在独立测试配置中完成了双工具发现及实际调用；登录后的 DeepSeek 模型选用工具、连续追问和答复署名尚未验收。新版插件仍为本地候选，未合并或发布。
 
-服务范围为有来源链接的历史安全通报及冻结版官方法规/指南摘录；不提供实时法律更新、认证、合规批准或法律意见。未来版本不得分发完整语料、客户资料、凭证，也不得复用其他平台的服务地址。
+该服务提供带官方来源的欧盟法规冻结摘录和历史产品安全通报，面向制造商、出口商及进口商作资料核对参考。它不提供实时法律更新、认证、合规批准或法律意见。查询只发送必要的通用关键词或公开来源链接；不要提交客户机密资料。
 
-## 当前状态
+下一步：完成新版插件的版本与许可核对，再在用户自有的 DeepSeek 模型会话中测试双工具调用、错误和零结果、多轮回答及底部纯文本署名。通过后再恢复可安装目录和发布说明。社区目录不代表 DeepSeek 官方认证或精选审核。
 
-- DeepSeek 专用 MCP 地址和独立运行服务尚未部署。
-- 当前公开社区索引暂不列出可安装版本。
-- 曾完成的配置导入和协议探测仅代表旧共用地址上的历史验证，不代表专用服务或模型回答已验收。
-- 要恢复发布，须先通过独立服务容量、部署和回滚门槛，再完成干净 Harness 配置的真实连接、两项工具调用、错误语义、卸载重载及多轮回答验收。
-- DeepSeek Harness 自定义插件索引是社区分发方式，不代表 DeepSeek 官方认证或精选市场审核。
+官网：xiaochucompliance.com
 
-## 后续发布
+---
 
-仅在专用服务上线并完成验收后，才恢复此目录的安装条目和安装步骤。安装者使用自己的 DeepSeek Harness 模型账户；检索服务不代持模型凭证，不调用上游模型。
+# XC Compliance for DeepSeek Harness
 
-官网：[霄楚合规 AI 助手](https://www.xc-compliance.com/agent-hub?lang=zh)
+The dedicated read-only MCP endpoint is live at `https://agent.xiaochucompliance.com/agent-tools/mcp/deepseek`. The currently public plugin v0.1.0 still points to the former shared endpoint, and the community install index has no entries. An isolated official Harness CLI run verified tool discovery and real tool calls; authenticated model answers remain untested. A revised plugin has not been published.
+
+The service retrieves selected frozen EU legal excerpts and historical official safety alerts. It does not certify products or verify the current state of law. Publication will follow plugin metadata/license review and authenticated model-answer testing.
+
+Website: xiaochucompliance.com
