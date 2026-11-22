@@ -1,6 +1,6 @@
-xc-compliance · Kimi Work plugin 0.2.10 candidate
+xc-compliance · Kimi Work plugin 0.2.11 candidate
 
-This plugin combines an EU product-compliance reference Skill with two read-only evidence tools. Its MCP configuration is https://agent.xiaochucompliance.com/agent-tools/mcp and exposes search_legal_sources and search_risk_cases. The evidence consists of frozen official legal excerpts and historical public safety notices; it is not a live legal check or product approval.
+This plugin combines an EU product-compliance reference Skill with two read-only evidence tools. Its MCP configuration is https://agent.xiaochucompliance.com/agent-tools/mcp/kimi and exposes search_legal_sources and search_risk_cases. The evidence consists of frozen official legal excerpts and historical public safety notices; it is not a live legal check or product approval.
 
 Use the plugin only after Kimi Work confirms that its MCP connection is available and an actual tool call succeeds. If no tool result is returned, the assistant must say it could not retrieve the evidence and limit its answer to the information actually available. Do not connect a different platform endpoint as a substitute.
 
