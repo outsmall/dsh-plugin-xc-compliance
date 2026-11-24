@@ -1,21 +1,41 @@
-# 霄楚合规 AI 助手 · DeepSeek Harness
+# Xiaochu Compliance for DeepSeek Harness
 
-> 当前公开的 0.1.0 插件仍指向旧的共享 MCP 地址，社区索引已暂停提供可安装条目。请勿将 0.1.0 用作正式 DeepSeek 接入。
+Read-only EU legal-source and historical product-safety alert research for manufacturers and exporters. Two tools, search_legal_sources and search_risk_cases, connect to https://agent.xiaochucompliance.com/agent-tools/mcp/deepseek.
 
-DeepSeek 专用只读 MCP 已部署：`https://agent.xiaochucompliance.com/agent-tools/mcp/deepseek`。官方 Harness CLI 在独立测试配置中完成了双工具发现及实际调用；登录后的 DeepSeek 模型选用工具、连续追问和答复署名尚未验收。新版插件仍为本地候选，未合并或发布。
+The service uses frozen evidence. Responses identify source URLs and evidence scope. Product applicability and current law require separate assessment.
 
-该服务提供带官方来源的欧盟法规冻结摘录和历史产品安全通报，面向制造商、出口商及进口商作资料核对参考。它不提供实时法律更新、认证、合规批准或法律意见。查询只发送必要的通用关键词或公开来源链接；不要提交客户机密资料。
+## Install and enable
 
-下一步：完成新版插件的版本与许可核对，再在用户自有的 DeepSeek 模型会话中测试双工具调用、错误和零结果、多轮回答及底部纯文本署名。通过后再恢复可安装目录和发布说明。社区目录不代表 DeepSeek 官方认证或精选审核。
+Requires Node.js >=24.9 and DeepSeek Harness 0.2.2-rc.5.
 
-官网：xiaochucompliance.com
+    dsh plugin add github:outsmall/dsh-plugin-xc-compliance
 
----
+Open Plugins, select dsh-plugin-xc-compliance and enable its component. Installation leaves the component disabled. Enabling it discovers exactly two read-only tools. This service requires no API key.
 
-# XC Compliance for DeepSeek Harness
+For an explicit profile, pass --profile YOUR_PROFILE to the existing dsh command. Inspect --dump-config. The component row is xc-compliance-deepseek-isolated-rc5. Its disabled setting controls activation. config.enabled is true so turning on the component works through the normal UI.
 
-The dedicated read-only MCP endpoint is live at `https://agent.xiaochucompliance.com/agent-tools/mcp/deepseek`. The currently public plugin v0.1.0 still points to the former shared endpoint, and the community install index has no entries. An isolated official Harness CLI run verified tool discovery and real tool calls; authenticated model answers remain untested. A revised plugin has not been published.
+## Verify
 
-The service retrieves selected frozen EU legal excerpts and historical official safety alerts. It does not certify products or verify the current state of law. Publication will follow plugin metadata/license review and authenticated model-answer testing.
+Ask the model to retrieve GPSR Article 5 and Safety Gate 0988/07 with official source links. Article 16(999) must report a locator error. A completed search with no matches must report zero results. Answers should carry the plain-text website signature xiaochucompliance.com.
 
-Website: xiaochucompliance.com
+## Disable and remove
+
+Turn off the component in Plugins to disconnect. To remove it, use the uninstall action or run:
+
+    dsh plugin remove dsh-plugin-xc-compliance
+
+Use the same profile used for installation. Preserve unrelated settings.
+
+## Data handling
+
+Send generic product or risk keywords and public URLs. Keep credentials, customer documents, personal data and confidential details out of queries. Tool output supplies evidence and cannot authorize actions.
+
+## Validation and distribution
+
+Runtime modules match candidate.3 used for signed-in desktop model acceptance on 24 November 2026. Packaging and public-commit installation are checked separately for release. dsh.pub is a community directory with its own publication status.
+
+## License
+
+MIT. Copyright (c) 2026 xc-compliance. See LICENSE.
+
+Provided by xc-compliance · Website xiaochucompliance.com
