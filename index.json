@@ -5,8 +5,8 @@
     "zh": "霄楚合规社区插件"
   },
   "description": {
-    "en": "The dedicated DeepSeek MCP endpoint is live. Installable entries remain paused pending authenticated DeepSeek client and model-answer acceptance. This is not an official DeepSeek catalog.",
-    "zh": "DeepSeek 专用 MCP 端点已上线。插件目录仍暂停提供可安装条目，待登录客户端及模型回答验收；此社区目录不代表 DeepSeek 官方目录。"
+    "en": "DeepSeek plugin 0.2.0 is available from this repository under MIT. The desktop-tested runtime uses the dedicated DeepSeek MCP endpoint. Community directory submission is pending its website security check.",
+    "zh": "DeepSeek 插件 0.2.0 已在本仓库以 MIT 许可公开，可从仓库安装。已验收运行模块使用 DeepSeek 专用 MCP 入口。社区目录提交仍待网站安全验证通过。"
   },
   "plugins": []
 }
