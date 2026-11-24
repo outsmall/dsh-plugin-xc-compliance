@@ -1,7 +1,7 @@
 {
   "mcpServers": {
     "xc-compliance": {
-      "url": "https://agent.xiaochucompliance.com/agent-tools/mcp",
+      "url": "https://agent.xiaochucompliance.com/agent-tools/mcp/kimi",
       "enabledTools": [
         "search_risk_cases",
         "search_legal_sources"
