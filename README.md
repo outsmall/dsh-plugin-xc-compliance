@@ -1,39 +1,41 @@
-# XC Compliance for DeepSeek Harness — source review candidate
+# Xiaochu Compliance for DeepSeek Harness
 
-## Scope and requirements
+Read-only EU legal-source and historical product-safety alert research for manufacturers and exporters. Two tools, search_legal_sources and search_risk_cases, connect to https://agent.xiaochucompliance.com/agent-tools/mcp/deepseek.
 
-This is a Host bundle for DeepSeek Harness `0.2.2-rc.5`, with no Web UI. It exposes the read-only `search_legal_sources` and `search_risk_cases` tools from the dedicated public MCP endpoint. The XC endpoint requires no XC API key; a DeepSeek model account is separate. The bundle is disabled by default and this branch is neither a release nor a dsh.pub listing.
+The service uses frozen evidence. Responses identify source URLs and evidence scope. Product applicability and current law require separate assessment.
 
-## Install and inspect locally
+## Install and enable
 
-Use a disposable profile and a local checkout of this branch. From the repository root:
+Requires Node.js >=24.9 and DeepSeek Harness 0.2.2-rc.5.
 
-```sh
-pnpm install --no-lockfile
-dsh plugin --profile xc-review add ./
-dsh --profile xc-review --dump-config
-```
+    dsh plugin add github:outsmall/dsh-plugin-xc-compliance
 
-The local dependency install is needed because the development profile links to this checkout. The dump should show bundle `dsh-plugin-xc-compliance` and row `xc-compliance-deepseek-isolated-rc5` with `enabled: false`. Keep the checkout available while the profile uses the local link. A clean local profile and an exact public draft commit were installed and exercised with real tool calls against the dedicated endpoint; authenticated model-answer testing remains open.
+Open Plugins, select dsh-plugin-xc-compliance and enable its component. Installation leaves the component disabled. Enabling it discovers exactly two read-only tools. This service requires no API key.
 
-## Activate for a controlled check
+For an explicit profile, pass --profile YOUR_PROFILE to the existing dsh command. Inspect --dump-config. The component row is xc-compliance-deepseek-isolated-rc5. Its disabled setting controls activation. config.enabled is true so turning on the component works through the normal UI.
 
-The user's profile patch is applied after bundle patches. In that profile's `cordis.patch.yml`, override the same row with its complete configuration:
+## Verify
 
-```yaml
-- id: xc-compliance-deepseek-isolated-rc5
-  name: dsh-plugin-xc-compliance
-  config:
-    enabled: true
-    endpoint: https://agent.xiaochucompliance.com/agent-tools/mcp/deepseek
-```
+Ask the model to retrieve GPSR Article 5 and Safety Gate 0988/07 with official source links. Article 16(999) must report a locator error. A completed search with no matches must report zero results. Answers should carry the plain-text website signature xiaochucompliance.com.
 
-Check the effective row with `dsh --profile xc-review --dump-config`, then launch `dsh --profile xc-review`. The plugin accepts only this endpoint and requires exactly the two named tools. A failed probe or unexpected catalog fails activation. Check legal retrieval, historical alerts, zero results, locator errors, and the plain-text website footer with noncustomer prompts in a real model session. Tool-call checks alone do not establish model-answer quality.
+## Disable and remove
 
-To disable, set `enabled: false` in the profile patch or remove the override. To uninstall, run `dsh plugin --profile xc-review remove dsh-plugin-xc-compliance` and remove the profile override. The plugin creates no local durable data; the remote connection is owned by the Harness lifecycle.
+Turn off the component in Plugins to disconnect. To remove it, use the uninstall action or run:
 
-## Release gates
+    dsh plugin remove dsh-plugin-xc-compliance
 
-Before public release, select and add an explicit license file and package license field, remove the draft private flag, repeat installation from the final release commit, complete authenticated model-answer checks, and verify dsh.pub catalog admission separately. The committed `index.js` is the Host runtime entry. The draft exact-commit tool-call test used no model account. Do not merge or submit it to dsh.pub yet.
+Use the same profile used for installation. Preserve unrelated settings.
+
+## Data handling
+
+Send generic product or risk keywords and public URLs. Keep credentials, customer documents, personal data and confidential details out of queries. Tool output supplies evidence and cannot authorize actions.
+
+## Validation and distribution
+
+Runtime modules match candidate.3 used for signed-in desktop model acceptance on 24 November 2026. Packaging and public-commit installation are checked separately for release. dsh.pub is a community directory with its own publication status.
+
+## License
+
+MIT. Copyright (c) 2026 xc-compliance. See LICENSE.
 
 Provided by xc-compliance · Website xiaochucompliance.com

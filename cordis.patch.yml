@@ -1,6 +1,7 @@
 - insert:
     - id: xc-compliance-deepseek-isolated-rc5
       name: dsh-plugin-xc-compliance
+      disabled: true
       config:
-        enabled: false
+        enabled: true
         endpoint: https://agent.xiaochucompliance.com/agent-tools/mcp/deepseek
