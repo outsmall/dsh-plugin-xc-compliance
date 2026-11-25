@@ -1,6 +1,7 @@
 ---
 name: xc-eu-compliance
 description: Assess EU-bound product materials, report-to-model coverage, labels, responsible-person arrangements and relevant official safety alerts. Retrieve bounded evidence from the connected XC Compliance MCP server and explain practical next steps. Not for unrelated law, certification, payments or account operations.
+license: MIT
 ---
 
 # XC Compliance · 霄楚合规 AI 助手
