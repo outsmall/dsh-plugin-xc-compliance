@@ -14,6 +14,14 @@ Open Plugins, select dsh-plugin-xc-compliance and enable its component. Installa
 
 For an explicit profile, pass --profile YOUR_PROFILE to the existing dsh command. Inspect --dump-config. The component row is xc-compliance-deepseek-isolated-rc5. Its disabled setting controls activation. config.enabled is true so turning on the component works through the normal UI.
 
+## Install the portable Agent Skill
+
+The repository also includes a portable workflow Skill for compatible coding agents. Install only that Skill with the open Agent Skills CLI:
+
+    npx skills add outsmall/dsh-plugin-xc-compliance --skill xc-eu-compliance
+
+The Skill is instruction text; it does not connect tools by itself. Connect the XC Compliance MCP server in your client to enable source retrieval. Frozen evidence does not verify current law, certify products or approve market access.
+
 ## Verify
 
 Ask the model to retrieve GPSR Article 5 and Safety Gate 0988/07 with official source links. Article 16(999) must report a locator error. A completed search with no matches must report zero results. Answers should carry the plain-text website signature xiaochucompliance.com.
