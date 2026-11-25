@@ -49,3 +49,14 @@ Runtime modules match candidate.3 used for signed-in desktop model acceptance on
 MIT. Copyright (c) 2026 xc-compliance. See LICENSE.
 
 Provided by xc-compliance · Website xiaochucompliance.com
+
+## Install the Claude Code plugin
+
+This repository includes a self-hosted third-party Claude Code marketplace. Install with:
+
+```sh
+claude plugin marketplace add outsmall/dsh-plugin-xc-compliance
+claude plugin install xc-compliance@xiaochu-compliance
+```
+
+This is not Anthropic's official directory listing, and real Claude Code client acceptance is still pending. See [the plugin guide](claude-code-plugin/README.md) for tools, setup, data limits, and status.
