@@ -16,6 +16,10 @@ Enabling the component discovers exactly two read-only tools. No XC API key is r
 
 The component row is `xc-compliance-deepseek-isolated-rc5`. Inspect the effective profile with `dsh --profile web --dump-config`. `disabled: true` controls initial activation; `config.enabled: true` lets you enable it through the normal Plugins UI.
 
+## Runtime and permissions
+
+This package contains executable JavaScript in `lib/index.js` and `lib/contract.js`; it is not a configuration-only bundle. The package defines no install lifecycle scripts. When enabled, its `apply(ctx)` entry uses the official `@deepseek-ai/dsh-mcp-client` to probe the fixed DeepSeek MCP endpoint, verify that it exposes exactly `search_legal_sources` and `search_risk_cases`, and then connect through that client. It fails closed if the endpoint or tool catalog differs. The plugin does not call an upstream model and exposes only the two read-only search tools.
+
 ## Install the portable Agent Skill
 
 The repository also includes a portable workflow Skill for compatible coding agents. The Node.js and DeepSeek Harness requirements above apply to the plugin; the standalone Skill has no Harness dependency. The Agent Skills CLI has its own runtime requirements.
@@ -55,4 +59,5 @@ Runtime modules match candidate.3 used for signed-in desktop model acceptance on
 MIT. Copyright (c) 2026 xc-compliance. See LICENSE.
 
 Provided by xc-compliance · Website xiaochucompliance.com
+
 
