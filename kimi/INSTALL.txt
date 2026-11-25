@@ -1,11 +1,29 @@
-xc-compliance · Kimi Work plugin 0.2.11 candidate
+xc-compliance · Kimi Work personal plugin v0.2.11
 
-Personal-plugin review path (not official marketplace publication): in current Kimi Work, open Plugin Builder with "/" or the Plugin Center's Custom plugin action. Give it only the `kimi/` subdirectory of the review branch at https://github.com/outsmall/dsh-plugin-xc-compliance/tree/kimi-v0.2.9-v005-review-20261122/kimi, and ask it to convert that native `kimi.plugin.json` plugin. Do not import the whole multi-plugin repository, whose root contains a separate DeepSeek draft. Inspect the converted manifest and dedicated MCP URL before registering. Then use Plugins → Personal → Install, check the MCP connection in the plugin details, and invoke the Skill in a conversation with "/". Kimi's official Plugin Builder help describes this personal import path; this candidate has not yet been imported or model-tested in an owner account.
+## Import into your personal plugins
 
-This plugin combines an EU product-compliance reference Skill with two read-only evidence tools. Its MCP configuration is https://agent.xiaochucompliance.com/agent-tools/mcp/kimi and exposes search_legal_sources and search_risk_cases. The evidence consists of frozen official legal excerpts and historical public safety notices; it is not a live legal check or product approval.
+This is the Kimi Work personal-plugin import path. It does not publish the plugin to Kimi's public marketplace.
 
-Use the plugin only after Kimi Work confirms that its MCP connection is available and an actual tool call succeeds. If no tool result is returned, the assistant must say it could not retrieve the evidence and limit its answer to the information actually available. Do not connect a different platform endpoint as a substitute.
+1. Open the latest Kimi Work desktop app.
+2. Open Plugin Builder by entering `/` in a conversation or choose **Plugins → Custom plugin** in Plugin Center.
+3. Give Plugin Builder only this Kimi subdirectory: https://github.com/outsmall/dsh-plugin-xc-compliance/tree/main/kimi
+4. Ask it to convert the native `kimi.plugin.json` into a personal plugin. Do not import the repository root, which contains other platform packages.
+5. Before registering the converted plugin, confirm that its MCP URL is exactly `https://agent.xiaochucompliance.com/agent-tools/mcp/kimi` and that it exposes only `search_legal_sources` and `search_risk_cases`.
+6. Open **Plugins → Personal**, install the converted plugin, and check that its MCP connection is available.
+7. In a conversation, invoke the plugin with `/` and run a read-only legal-source query and a historical-alert query. Confirm that the tool results appear before relying on the answer.
 
-Send only the minimum generic product or hazard keywords, or an exact public official URL and locator. Do not send customer files, identity details or confidential information to the MCP service.
+Kimi Work's official guide documents importing plugin repositories and converting a selected subdirectory into a personal plugin. Official marketplace publication is a separate process.
+
+## What it does
+
+The plugin combines an EU product-compliance reference Skill with two read-only evidence tools. It searches frozen official legal excerpts and historical public safety alerts. It does not perform a live legal check, certify a product, or approve market access.
+
+Example read-only checks:
+- Retrieve GPSR Article 16(1) and its official EUR-Lex source.
+- Retrieve Safety Gate notification 0988/07 and its official detail link.
+
+If the plugin returns no tool result, say the evidence could not be retrieved and do not imply the query succeeded. Do not connect another platform's MCP endpoint as a substitute.
+
+Send only minimal generic product or hazard terms, or an exact public official URL and locator. Do not send customer files, personal details, credentials, or confidential information.
 
 The Chinese and English answer footer is plain text and contains the website domain, not a clickable link.
