@@ -1,0 +1,15 @@
+{
+  "name": "xiaochu-compliance",
+  "description": "Third-party Claude Code plugins from Xiaochu Compliance.",
+  "owner": {
+    "name": "xc-compliance",
+    "email": "support@xiaochucompliance.com"
+  },
+  "plugins": [
+    {
+      "name": "xc-compliance",
+      "source": "./claude-code-plugin",
+      "description": "Search selected EU product-compliance sources and historical official safety alerts through read-only MCP tools."
+    }
+  ]
+}
