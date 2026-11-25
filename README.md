@@ -16,7 +16,9 @@ For an explicit profile, pass --profile YOUR_PROFILE to the existing dsh command
 
 ## Install the portable Agent Skill
 
-The repository also includes a portable workflow Skill for compatible coding agents. Install only that Skill with the open Agent Skills CLI:
+The repository also includes a portable workflow Skill for compatible coding agents. The Node.js and DeepSeek Harness requirements above apply to the plugin; the standalone Skill has no Harness dependency. The Agent Skills CLI has its own runtime requirements.
+
+Install only the Skill with the open Agent Skills CLI:
 
     npx skills add outsmall/dsh-plugin-xc-compliance --skill xc-eu-compliance
 
