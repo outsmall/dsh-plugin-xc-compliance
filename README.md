@@ -38,7 +38,7 @@ For opt-in discovery in DSH's experimental custom-index feature, add this index 
 
     https://raw.githubusercontent.com/outsmall/dsh-plugin-xc-compliance/main/index.json
 
-This author-maintained index pins version 0.2.0 to source commit `7c4a7c6eab71698f177006e743ecc3fa65e17d39). DSH does not bundle this index by default. It is not a curated registry listing or DSH endorsement. Review the source shown in DSH's install confirmation before installing. The separate dsh.pub community-directory submission is still pending.
+This author-maintained index pins version 0.2.0 to source commit `7c4a7c6eab71698f177006e743ecc3fa65e17d39`. DSH does not bundle this index by default. It is not a curated registry listing or DSH endorsement. Review the source shown in DSH's install confirmation before installing. The separate dsh.pub community-directory submission is still pending.
 
 ## Verify
 
