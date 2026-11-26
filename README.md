@@ -28,6 +28,8 @@ Install only the Skill with the open Agent Skills CLI:
 
     npx skills add outsmall/dsh-plugin-xc-compliance --skill xc-eu-compliance
 
+Browse the public skills.sh listing: https://skills.sh/outsmall/dsh-plugin-xc-compliance/xc-eu-compliance.
+
 The Skill is instruction text; it does not connect tools by itself. Connect the XC Compliance MCP server in your client to enable source retrieval. Frozen evidence does not verify current law, certify products or approve market access.
 
 ## Verify
