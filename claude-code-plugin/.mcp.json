@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "xiaochu-evidence": {
+      "type": "http",
+      "url": "https://agent.xiaochucompliance.com/agent-tools/mcp"
+    }
+  }
+}
