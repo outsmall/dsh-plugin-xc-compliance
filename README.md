@@ -60,4 +60,13 @@ MIT. Copyright (c) 2026 xc-compliance. See LICENSE.
 
 Provided by xc-compliance · Website xiaochucompliance.com
 
+## Claude Code plugin (third-party marketplace)
 
+This repository also provides a self-hosted Claude Code marketplace and plugin package. Install it with:
+
+```sh
+claude plugin marketplace add outsmall/dsh-plugin-xc-compliance
+claude plugin install xc-compliance@xiaochu-compliance
+```
+
+The bundled `xc-eu-compliance` Skill matches the portable Skill in this repository. The plugin connects to the read-only MCP endpoint and exposes `search_legal_sources` and `search_risk_cases`. See [the Claude Code plugin guide](claude-code-plugin/README.md) for setup and limitations. This is not an Anthropic official marketplace listing or endorsement; signed-in Claude Code client acceptance is pending.
