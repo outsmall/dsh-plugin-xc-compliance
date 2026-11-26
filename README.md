@@ -32,6 +32,14 @@ Browse the public skills.sh listing: https://skills.sh/outsmall/dsh-plugin-xc-co
 
 The Skill is instruction text; it does not connect tools by itself. Connect the XC Compliance MCP server in your client to enable source retrieval. Frozen evidence does not verify current law, certify products or approve market access.
 
+## Optional DSH custom index
+
+For opt-in discovery in DSH's experimental custom-index feature, add this index URL in Plugins > Experimental plugins > Custom plugin index, then choose Discover and add an index source:
+
+    https://raw.githubusercontent.com/outsmall/dsh-plugin-xc-compliance/main/index.json
+
+This author-maintained index pins version 0.2.0 to source commit `7c4a7c6eab71698f177006e743ecc3fa65e17d39). DSH does not bundle this index by default. It is not a curated registry listing or DSH endorsement. Review the source shown in DSH's install confirmation before installing. The separate dsh.pub community-directory submission is still pending.
+
 ## Verify
 
 Ask the model to retrieve GPSR Article 5 and Safety Gate 0988/07 with official source links. Article 16(999) must report a locator error. A completed search with no matches must report zero results. Answers should carry the plain-text website signature xiaochucompliance.com.
@@ -50,7 +58,7 @@ Send generic product or risk keywords and public URLs. Keep credentials, custome
 
 ## Distribution status
 
-This repository is source-installable and is not currently published to npm. It can be listed on the DSH community website, but it will not appear in the in-app DSH Plugin Hub until an npm package is published.
+This repository is source-installable and is not currently published to npm. It does not appear in DSH's default plugin catalog. Users may opt in to the custom index above; the separate dsh.pub community-directory submission and its review status remain independent.
 
 ## Validation and distribution
 
@@ -61,5 +69,3 @@ Runtime modules match candidate.3 used for signed-in desktop model acceptance on
 MIT. Copyright (c) 2026 xc-compliance. See LICENSE.
 
 Provided by xc-compliance · Website xiaochucompliance.com
-
-
