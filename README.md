@@ -34,7 +34,7 @@ The Skill is instruction text; it does not connect tools by itself. Connect the 
 
 ## Optional DSH custom index
 
-For opt-in discovery in DSH's experimental custom-index feature, add this index URL in Plugins > Experimental plugins > Custom plugin index, then choose Discover and add an index source:
+To opt in to discovery, enable the experimental Custom Plugin Index bundle under Plugins > Experimental plugins. Then open Discover > Manage index sources > Add index source and paste this URL:
 
     https://raw.githubusercontent.com/outsmall/dsh-plugin-xc-compliance/main/index.json
 
