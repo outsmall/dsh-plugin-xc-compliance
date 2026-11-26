@@ -32,6 +32,8 @@ Browse the public skills.sh listing: https://skills.sh/outsmall/dsh-plugin-xc-co
 
 The Skill is instruction text; it does not connect tools by itself. Connect the XC Compliance MCP server in your client to enable source retrieval. Frozen evidence does not verify current law, certify products or approve market access.
 
+For setup in Claude, see the [Claude remote connector guide](docs/claude-connector-guide.md). It covers custom MCP setup and the connector's evidence and privacy limits.
+
 ## Optional DSH custom index
 
 To opt in to discovery, enable the experimental Custom Plugin Index bundle under Plugins > Experimental plugins. Then open Discover > Manage index sources > Add index source and paste this URL:
