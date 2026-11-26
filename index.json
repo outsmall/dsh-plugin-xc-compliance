@@ -1,12 +1,41 @@
 {
   "format": 1,
   "title": {
-    "en": "xc-compliance community plugins",
-    "zh": "霄楚合规社区插件"
+    "en": "Xiaochu Compliance custom plugin index",
+    "zh": "霄楚合规自定义插件索引"
   },
   "description": {
-    "en": "DeepSeek plugin 0.2.0 is available from this repository under MIT. The desktop-tested runtime uses the dedicated DeepSeek MCP endpoint. Community directory submission is pending its website security check.",
-    "zh": "DeepSeek 插件 0.2.0 已在本仓库以 MIT 许可公开，可从仓库安装。已验收运行模块使用 DeepSeek 专用 MCP 入口。社区目录提交仍待网站安全验证通过。"
+    "en": "Author-maintained, opt-in DSH custom index. It lists the MIT-licensed XC Compliance plugin source; it is not a curated or endorsed DSH registry listing. The separate community directory submission is still pending.",
+    "zh": "由开发者维护、需用户自行添加的 DSH 自定义插件索引，列出 MIT 许可的霄楚合规插件源码；这不是 DSH 官方精选或背书的注册表。独立的社区目录申请仍在等待处理。"
   },
-  "plugins": []
+  "plugins": [
+    {
+      "name": "dsh-plugin-xc-compliance",
+      "title": {
+        "en": "XC Compliance",
+        "zh": "霄楚合规"
+      },
+      "description": {
+        "en": "Read-only searches of frozen EU product-compliance legal excerpts and historical official safety alerts for manufacturers and exporters. It does not certify products or automatically verify current law.",
+        "zh": "为制造商和出口商只读检索冻结版欧盟产品合规法规摘录与历史官方安全通报；不提供产品认证，也不自动核验现行法律。"
+      },
+      "author": "xc-compliance",
+      "homepage": "https://xiaochucompliance.com/agent-hub",
+      "repository": {
+        "url": "https://github.com/outsmall/dsh-plugin-xc-compliance"
+      },
+      "versions": [
+        {
+          "version": "0.2.0",
+          "publishTimestamp": 1795650299,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/outsmall/dsh-plugin-xc-compliance",
+            "commit": "7c4a7c6eab71698f177006e743ecc3fa65e17d39",
+            "path": "."
+          }
+        }
+      ]
+    }
+  ]
 }
